@@ -25,15 +25,30 @@ body {
     padding: 25px 20px;
     border-right: 3px solid black;
     box-shadow: 6px 0 25px rgba(179, 0, 0, 0.45);
-    overflow-y: auto;
+    overflow-y: hidden;
 }
-
 .sidebar h2 {
     color: white;
-    margin-bottom: 30px;
     text-align: center;
-    font-size: 22px;
-    line-height: 1.2;
+    font-size: 21px;
+    line-height: 1.25;
+    margin-bottom: 45px;
+}
+.sidebar a,
+.dropdown-btn {
+    display: block;
+    width: 100%;
+    color: white;
+    background-color: #b30000;
+    text-decoration: none;
+    padding: 14px 18px;
+    margin-bottom: 13px;
+    border-radius: 8px;
+    font-size: 17px;
+    border: 2px solid black;
+    text-align: left;
+    cursor: pointer;
+    box-shadow: 0 0 12px rgba(179, 0, 0, 0.6);
 }
 
 /* RED MENU BOXES */
@@ -276,8 +291,10 @@ footer {
     padding-left: 15px;
 }
 .sidebar-logo {
-    width: 100%;
-    margin-top: 35px;
+    width: 60%;
+    max-width: 180px;
+    display: block;
+    margin: 20px auto 0 auto;
     opacity: 0.9;
     border-radius: 8px;
 }
