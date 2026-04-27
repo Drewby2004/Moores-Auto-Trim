@@ -1,0 +1,264 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: black;
+    color: white;
+}
+
+/* LEFT SIDE NAVIGATION */
+.sidebar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 275px;
+    height: 100vh;
+    background: linear-gradient(135deg, #000000 0%, #3b0000 45%, #8b0000 100%);
+    padding: 25px 20px;
+    border-right: 3px solid black;
+    box-shadow: 6px 0 25px rgba(179, 0, 0, 0.45);
+    overflow-y: auto;
+}
+
+.sidebar h2 {
+    color: white;
+    margin-bottom: 30px;
+    text-align: center;
+    font-size: 22px;
+    line-height: 1.2;
+}
+
+/* RED MENU BOXES */
+.sidebar a,
+.dropdown-btn {
+    display: block;
+    width: 100%;
+    color: white;
+    background-color: #b30000;
+    text-decoration: none;
+    padding: 14px;
+    margin-bottom: 12px;
+    border-radius: 8px;
+    font-size: 17px;
+    border: 2px solid black;
+    text-align: left;
+    cursor: pointer;
+    box-shadow: 0 0 12px rgba(179, 0, 0, 0.6);
+}
+
+.sidebar a:hover,
+.dropdown-btn:hover {
+    background-color: white;
+    color: #8b0000;
+}
+
+/* DROPDOWN MENU */
+.dropdown-content {
+    display: none;
+    margin-left: 15px;
+}
+
+.dropdown-content a {
+    font-size: 15px;
+    background-color: #8b0000;
+    border: 2px solid black;
+}
+
+.dropdown-content.show {
+    display: block;
+}
+
+/* MAIN PAGE CONTENT */
+.content {
+    margin-left: 275px;
+    padding: 40px;
+    background-color: black;
+}
+
+.section {
+    min-height: 100vh;
+    padding: 60px 40px;
+    border-bottom: 1px solid #1a1a1a;
+}
+
+.section h1 {
+    color: white;
+    font-size: 42px;
+    margin-bottom: 20px;
+    border-bottom: 3px solid #b30000;
+    display: inline-block;
+    padding-bottom: 8px;
+}
+
+.section p {
+    font-size: 20px;
+    line-height: 1.6;
+    max-width: 850px;
+    color: #e6e6e6;
+}
+
+/* HOME SECTION */
+.hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 60px;
+    color: white;
+}
+
+.hero p {
+    color: #ddd;
+    font-size: 24px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* PHOTO AREAS */
+.photo-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 22px;
+    margin-top: 30px;
+    max-width: 1000px;
+}
+
+.photo-box {
+    height: 220px;
+    border: 2px dashed #b30000;
+    background-color: #111;
+    color: #cccccc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    font-size: 18px;
+}
+
+.photo-grid img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border: 2px solid #b30000;
+    border-radius: 10px;
+}
+
+/* CONTACT SECTION */
+.contact-section {
+    min-height: 100vh;
+}
+
+.owner-section {
+    margin-top: 30px;
+    max-width: 900px;
+}
+
+.owner-section h2 {
+    color: white;
+    font-size: 36px;
+    margin-bottom: 8px;
+}
+
+.owner-section h3 {
+    color: white;
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.owner-photo-box {
+    width: 260px;
+    height: 260px;
+    border: 2px dashed #b30000;
+    background-color: #111;
+    color: #cccccc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    margin-bottom: 25px;
+    font-size: 18px;
+}
+
+.owner-section p {
+    font-size: 20px;
+    line-height: 1.7;
+    color: #e6e6e6;
+    max-width: 900px;
+}
+
+.contact-info {
+    margin-top: 40px;
+}
+
+.contact-info p {
+    font-size: 22px;
+    margin-bottom: 16px;
+}
+
+.contact-info strong {
+    color: white;
+}
+
+.contact-info a {
+    color: #4da3ff;
+    text-decoration: none;
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: linear-gradient(90deg, #000000 0%, #660000 55%, #b30000 100%);
+    color: white;
+}
+
+/* MOBILE FRIENDLY */
+@media screen and (max-width: 800px) {
+    .sidebar {
+        position: relative;
+        width: 100%;
+        height: auto;
+        border-right: none;
+        border-bottom: 3px solid black;
+    }
+
+    .content {
+        margin-left: 0;
+        padding: 20px;
+    }
+
+    .section {
+        padding: 40px 20px;
+    }
+
+    .hero h1 {
+        font-size: 42px;
+    }
+}
+.car-project {
+    margin-top: 45px;
+}
+
+.car-project h2 {
+    color: white;
+    font-size: 30px;
+    margin-bottom: 20px;
+    border-left: 5px solid #b30000;
+    padding-left: 15px;
+}
