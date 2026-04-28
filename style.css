@@ -27,6 +27,7 @@ body {
     box-shadow: 6px 0 25px rgba(179, 0, 0, 0.45);
     overflow-y: hidden;
 }
+
 .sidebar h2 {
     color: white;
     text-align: center;
@@ -34,6 +35,8 @@ body {
     line-height: 1.25;
     margin-bottom: 45px;
 }
+
+/* SIDEBAR BUTTONS */
 .sidebar a,
 .dropdown-btn {
     display: block;
@@ -43,24 +46,6 @@ body {
     text-decoration: none;
     padding: 14px 18px;
     margin-bottom: 13px;
-    border-radius: 8px;
-    font-size: 17px;
-    border: 2px solid black;
-    text-align: left;
-    cursor: pointer;
-    box-shadow: 0 0 12px rgba(179, 0, 0, 0.6);
-}
-
-/* RED MENU BOXES */
-.sidebar a,
-.dropdown-btn {
-    display: block;
-    width: 100%;
-    color: white;
-    background-color: #b30000;
-    text-decoration: none;
-    padding: 14px;
-    margin-bottom: 12px;
     border-radius: 8px;
     font-size: 17px;
     border: 2px solid black;
@@ -85,6 +70,8 @@ body {
     font-size: 15px;
     background-color: #8b0000;
     border: 2px solid black;
+    padding: 12px;
+    margin-bottom: 8px;
 }
 
 .dropdown-content.show {
@@ -98,9 +85,10 @@ body {
     background-color: black;
 }
 
+/* GENERAL PAGE SECTIONS */
 .section {
     min-height: 100vh;
-    padding: 60px 40px;
+    padding: 20px 40px;
     border-bottom: 1px solid #1a1a1a;
 }
 
@@ -125,14 +113,13 @@ body {
     position: relative;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     text-align: center;
     min-height: 100vh;
     overflow: hidden;
+    padding-top: 25px;
 }
-
-
 
 .hero h1,
 .hero p {
@@ -152,6 +139,16 @@ body {
     margin-left: auto;
     margin-right: auto;
     max-width: 1000px;
+}
+
+/* HOME LOGO */
+.home-logo {
+    width: 45%;
+    max-width: 520px;
+    display: block;
+    margin: 0 auto;
+    border-radius: 12px;
+    box-shadow: 0 0 45px rgba(179, 0, 0, 0.18);
 }
 
 /* PHOTO AREAS */
@@ -181,6 +178,19 @@ body {
     object-fit: cover;
     border: 2px solid #b30000;
     border-radius: 10px;
+}
+
+/* CUSTOM WORK CAR PROJECTS */
+.car-project {
+    margin-top: 45px;
+}
+
+.car-project h2 {
+    color: white;
+    font-size: 30px;
+    margin-bottom: 20px;
+    border-left: 5px solid #b30000;
+    padding-left: 15px;
 }
 
 /* CONTACT SECTION */
@@ -248,6 +258,24 @@ body {
     text-decoration: underline;
 }
 
+/* SIDEBAR LOGOS */
+.sidebar-logo {
+    width: 60%;
+    max-width: 180px;
+    display: block;
+    margin: 20px auto 0 auto;
+    opacity: 0.9;
+    border-radius: 8px;
+}
+
+.sidebar-top-logo {
+    width: 75%;
+    max-width: 220px;
+    display: block;
+    margin: 0 auto 35px auto;
+    border-radius: 8px;
+}
+
 /* FOOTER */
 footer {
     text-align: center;
@@ -264,6 +292,7 @@ footer {
         height: auto;
         border-right: none;
         border-bottom: 3px solid black;
+        overflow-y: visible;
     }
 
     .content {
@@ -278,23 +307,46 @@ footer {
     .hero h1 {
         font-size: 42px;
     }
-}
-.car-project {
-    margin-top: 45px;
+
+    .home-logo {
+        width: 90%;
+        max-width: 500px;
+    }
+
+    .photo-grid {
+        grid-template-columns: 1fr;
+    }
 }
 
-.car-project h2 {
-    color: white;
-    font-size: 30px;
-    margin-bottom: 20px;
-    border-left: 5px solid #b30000;
-    padding-left: 15px;
+.logo-glow {
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
 }
-.sidebar-logo {
-    width: 60%;
-    max-width: 180px;
+
+.logo-glow::before {
+    content: "";
+    position: absolute;
+    width: 110%;
+    height: 110%;
+    background: radial-gradient(
+        circle,
+        rgba(200, 0, 0, 0.48) 0%,
+        rgba(170, 0, 0, 0.28) 35%,
+        rgba(120, 0, 0, 0.14) 55%,
+        transparent 78%
+    );
+    filter: blur(55px);
+    z-index: 0;
+}
+
+.home-logo {
+    position: relative;
+    z-index: 1;
+    width: 62vw;
+    max-width: 900px;
+    min-width: 420px;
     display: block;
-    margin: 20px auto 0 auto;
-    opacity: 0.9;
-    border-radius: 8px;
+    border-radius: 18px;
 }
